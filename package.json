@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "npx nodemon Backend/index.js",
     "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
-    "start": "nodemon Backend/index.js"
+    "start": "node Backend/index.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

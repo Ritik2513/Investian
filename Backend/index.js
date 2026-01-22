@@ -19,7 +19,7 @@ const _dirname = path.resolve();
 // MIDDLEWARES
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: true,
     credentials: true,
   }),
 );
@@ -29,10 +29,10 @@ app.use(cookieParser());
 app.use("/api/auth", authRouter);
 app.use("/api/projects", projectRouter);
 
-app.use(express.static(path.join(_dirname, "Frontend","dist")));
-app.get(/.*/,(_,res)=>{
-  res.sendFile(path.resolve(_dirname,"Frontend","dist","index.html"))
-})
+app.use(express.static(path.join(_dirname, "Frontend", "dist")));
+app.get(/.*/, (_, res) => {
+  res.sendFile(path.resolve(_dirname, "Frontend", "dist", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
