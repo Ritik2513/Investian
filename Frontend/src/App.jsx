@@ -18,7 +18,7 @@ import Dashboard from "./components/Dashboard/pages/Dashboard";
 import Project from "./components/Dashboard/pages/Project/Project";
 import Vouchers from "./components/Dashboard/pages/Vouchers";
 import Reports from "./components/Dashboard/pages/Reports";
-export const serverUrl = "https://investian.onrender.com/";
+export const serverUrl = "https://investian.onrender.com";
 import { ProjectsProvider } from "./components/Projects/Context/ProjectsContext";
 
 const App = () => {
